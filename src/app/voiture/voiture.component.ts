@@ -2,9 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'app-voiture',
-  templateUrl: './voiture.component.html'
+  templateUrl: './voiture.component.html',
+  styleUrls: ['./voiture.component.css']
 })
 export class VoitureComponent {
   name: string = "BMW";
-  status: string = "Démarrée";
+  status: boolean = true;
 }

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Chakib';
+  isDisabled: boolean = true;
+  addText: string = "Pas de voitures ajoutées";
+  nomVoiture:string = "Aucune marque saisie";
+
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = false;
+    }, 2000);
+  }
+
+  afficherAlert() {
+    this.addText = "Une voiture a été ajoutée";
+  }
 }

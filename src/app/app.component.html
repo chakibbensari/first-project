@@ -1,4 +1,6 @@
-<h1>Hello {{ name }}</h1>
+<input type="text" [(ngModel)]="nomVoiture"> {{ nomVoiture + 'TOTO' }}
+<button [disabled]="isDisabled" (click)="afficherAlert();">Ajouter une voiture</button>
+<span>{{ addText }}</span>
 <app-voiture></app-voiture>
 <app-voiture></app-voiture>
 <app-voiture></app-voiture>
