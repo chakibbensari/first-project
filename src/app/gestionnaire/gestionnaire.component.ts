@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { Voiture } from "src/Model/Voiture";
 
 @Component({
@@ -9,9 +9,12 @@ export class GestionnaireComponent {
   newMarque: string;
   newModele: string;
 
+  @Output()
+  addedVoiture: EventEmitter<Voiture> = new EventEmitter();
+
   ajouterVoiture() {
     let voiture = new Voiture(this.newMarque, this.newModele);
-    // voitures.push(voiture);
+    this.addedVoiture.emit(voiture);
     console.log("Voiture ajoutée : " + this.newMarque + " " + this.newModele);
   }
 }

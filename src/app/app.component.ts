@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Voiture } from 'src/Model/Voiture';
 
 @Component({
   selector: 'app-root',
@@ -6,26 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isDisabled: boolean = true;
-  addText: string = "Pas de voitures ajoutées";
-  nomVoiture: string = "Aucune marque saisie";
-  lettre: string;
-  isAdded: boolean = false;
-  voitures: Array<String> = ['BMW', 'OPEL', 'FORD'];
+
+  voitures: Array<Voiture> = [new Voiture("BMW", "X6"), new Voiture("OPEL", "ASTRA")];
 
   constructor() {
-    setTimeout(() => {
-      this.isDisabled = false;
-    }, 2000);
+
   }
 
-  ajouterVoiture() {
-    this.isAdded = true;
-    this.addText = "Une voiture a été ajoutée";
+  addVoitureToList(voitureEvent: Voiture) {
+    this.voitures.push(voitureEvent);
   }
 
-  afficherLettreSaisie(event: Event) {
-    // console.log((<HTMLInputElement>event.target).value);
-    this.lettre = (<HTMLInputElement>event.target).value;
-  }
 }
