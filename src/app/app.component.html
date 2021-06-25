@@ -1,4 +1,24 @@
-<input type="text"
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-gestionnaire></app-gestionnaire>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+        <app-garage></app-garage>
+    </div>
+    <div class="col-md-6">
+        <app-detail></app-detail>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <input type="text"
         [(ngModel)]="nomVoiture"
         (input)="afficherLettreSaisie($event)"
         /> {{ lettre }}
@@ -11,8 +31,8 @@
 
 <app-voiture *ngFor="let voiture of voitures; let i = index;" ></app-voiture>
 
-<!-- <p *ngFor="let voiture of voitures; let i = index;">
+<p *ngFor="let voiture of voitures; let i = index;">
   <span *ngIf=" (i + 1) % 2 == 0">
     {{ i + 1 }} - {{ voiture }}
   </span>
-</p> -->
+</p>  -->
