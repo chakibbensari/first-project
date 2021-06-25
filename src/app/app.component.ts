@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isDisabled: boolean = true;
   addText: string = "Pas de voitures ajoutées";
-  nomVoiture:string = "Aucune marque saisie";
+  nomVoiture: string = "Aucune marque saisie";
+  lettre: string;
+  isAdded: boolean = false;
+  voitures: Array<String> = ['BMW', 'OPEL', 'FORD'];
 
   constructor() {
     setTimeout(() => {
@@ -16,7 +19,13 @@ export class AppComponent {
     }, 2000);
   }
 
-  afficherAlert() {
+  ajouterVoiture() {
+    this.isAdded = true;
     this.addText = "Une voiture a été ajoutée";
+  }
+
+  afficherLettreSaisie(event: Event) {
+    // console.log((<HTMLInputElement>event.target).value);
+    this.lettre = (<HTMLInputElement>event.target).value;
   }
 }

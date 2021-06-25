@@ -6,6 +6,9 @@ import { Component } from "@angular/core";
   styleUrls: ['./voiture.component.css']
 })
 export class VoitureComponent {
-  name: string = "BMW";
-  status: boolean = true;
+  name: string = Math.random() > 0.5 ? "BMW" : "OPEL";
+  status: boolean = Math.random() > 0.5 ? true : false;
+  textColor: string = this.status ? 'green' : 'red';
+
+
 }

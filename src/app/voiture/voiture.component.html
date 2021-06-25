@@ -1,1 +1,10 @@
-<p>Voiture de marque {{ name }}. La voiture est démarée : {{ status }}</p>
+<p>
+  Voiture de marque {{ name }}.
+  La voiture est démarée :
+  <span [ngStyle]="{backgroundColor : textColor, color : 'white'}">{{ status }}</span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button [ngStyle]="{backgroundColor : textColor, color : 'white'}"
+          [ngClass]="{'btn': true, 'btn-success' : !status, 'btn-danger' : status}">
+          Changer status
+  </button>
+</p>
