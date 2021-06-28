@@ -6,6 +6,7 @@ import { VoitureComponent } from './voiture/voiture.component';
 import { FormsModule } from '@angular/forms';
 import { GestionnaireComponent } from './gestionnaire/gestionnaire.component';
 import { DetailComponent } from './detail/detail.component';
+import { VoitureService } from 'src/Service/VoitureService';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DetailComponent } from './detail/detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [VoitureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
