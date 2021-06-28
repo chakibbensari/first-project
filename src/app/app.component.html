@@ -8,15 +8,12 @@
   <div class="row">
     <div class="col-md-12">
         <!-- binding property pour transmission de l'objet voiture vers le voitureCompoent à travaers theVoiture -->
-    <!-- <router-outlet></router-outlet> -->
-    <app-voiture *ngFor="let voiture of voitures"
-                [theVoiture]="voiture"
-                (selectedVoitureEvent)="onReceivedSelectedVoiture($event)">
-    </app-voiture>
+    <router-outlet></router-outlet>
+    <!-- <app-garage></app-garage> -->
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
         <app-detail [theDetailedVoiture]="theSelectedVoiture"></app-detail>
-    </div>
+    </div> -->
   </div>
 </div>
 

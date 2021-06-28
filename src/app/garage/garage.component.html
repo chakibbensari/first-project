@@ -1,0 +1,4 @@
+<app-voiture *ngFor="let voiture of voitures"
+                [theVoiture]="voiture"
+                (selectedVoitureEvent)="onReceivedSelectedVoiture($event)">
+    </app-voiture>
