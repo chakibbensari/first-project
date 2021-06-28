@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Voiture } from 'src/Model/Voiture';
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styles: [
-  ]
+  styleUrls: ["./detail.component.css"]
 })
 export class DetailComponent implements OnInit {
+
+  @Input()
+  theDetailedVoiture:Voiture = new Voiture("", "");
 
   constructor() { }
 

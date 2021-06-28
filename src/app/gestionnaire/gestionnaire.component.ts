@@ -3,7 +3,8 @@ import { Voiture } from "src/Model/Voiture";
 
 @Component({
   selector: "app-gestionnaire",
-  templateUrl: "./gestionnaire.component.html"
+  templateUrl: "./gestionnaire.component.html",
+  styleUrls: ["./gestionnaire.component.css"]
 })
 export class GestionnaireComponent {
   newMarque: string;
