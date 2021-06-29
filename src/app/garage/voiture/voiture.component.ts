@@ -10,11 +10,4 @@ export class VoitureComponent {
   @Input()
   theVoiture: Voiture;
 
-  @Output()
-  selectedVoitureEvent : EventEmitter<Voiture> = new EventEmitter();
-
-  selectVoiture(){
-    this.selectedVoitureEvent.emit(this.theVoiture);
-  }
-
 }

@@ -17,8 +17,6 @@ export class GestionnaireComponent {
     // this.voitureService = voitureService;
   }
 
-  // @Output()
-  // addedVoiture: EventEmitter<Voiture> = new EventEmitter();
 
   ajouterVoiture() {
     let voiture = new Voiture(this.newMarque, this.newModele);

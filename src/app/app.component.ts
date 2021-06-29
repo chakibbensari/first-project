@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Voiture } from 'src/Model/Voiture';
 import { VoitureService } from 'src/Service/VoitureService';
-import { VoitureComponent } from './garage/voiture/voiture.component';
 
 @Component({
   selector: 'app-root',
@@ -20,15 +19,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-  }
-
-
-  // addVoitureToList(voitureEvent: Voiture) {
-  //   this.voitures.push(voitureEvent);
-  // }
-
-  onReceivedSelectedVoiture(voiture: Voiture) {
-    this.theSelectedVoiture = voiture;
   }
 
 }
