@@ -8,5 +8,12 @@ export class VoitureService {
     console.log("Voiture ajoutée : " + voiture.marque + " " + voiture.modele);
   }
 
+  getVoitureByMarque(marque: string) {
+    const result = this.voitures.filter((voiture) => {
+      return voiture.marque == marque;
+    });
+    return result[0];
+  }
+
 }
 
