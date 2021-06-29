@@ -9,10 +9,14 @@ import { DetailComponent } from './detail/detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { VoitureService } from 'src/Service/VoitureService';
 import { GarageComponent } from './garage/garage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PatientsComponent } from './patients/patients.component';
+import { PatientService } from 'src/Service/PatientService';
 
 const ROUTES: Routes = [
-  { path: "", component: GarageComponent },
-  { path: "voitures/:marque", component: DetailComponent }
+  { path: "voitures", component: GarageComponent },
+  { path: "voitures/:marque", component: DetailComponent },
+  { path: "patients", component: PatientsComponent }
 ]
 
 @NgModule({
@@ -21,14 +25,16 @@ const ROUTES: Routes = [
     VoitureComponent,
     GestionnaireComponent,
     DetailComponent,
-    GarageComponent
+    GarageComponent,
+    PatientsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
-  providers: [VoitureService],
+  providers: [VoitureService, PatientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
